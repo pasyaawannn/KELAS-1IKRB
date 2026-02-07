@@ -1,0 +1,157 @@
+html{
+  -webkit-text-size-adjust: 100%;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background:#f5f7fb;
+  color:#1f2937;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: white;
+  padding: 50px 16px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background: white;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #4f46e5;
+  font-size: 0.95rem;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+/* GARIS BAWAH HOVER */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #4f46e5;
+  transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* ===== SECTION ===== */
+section {
+  padding: 50px 6%;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #4f46e5;
+}
+
+.total {
+  text-align: center;
+  margin-bottom: 28px;
+  font-weight: 600;
+}
+
+.total span {
+  color: #4f46e5;
+  font-size: 1.2rem;
+}
+
+/* ===== GRID ANGGOTA ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.member {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.member:hover {
+  transform: translateY(-6px);
+}
+
+.member img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.member p {
+  font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 22px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* ===== MOBILE ===== */
+@media (hover: none){
+  .navbar a::after{
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px){
+
+  .top-header h1{
+    font-size: 1.8rem;
+  }
+
+  .navbar{
+    gap: 10px;
+    padding: 12px 8px;
+  }
+
+  .navbar a{
+    font-size: 0.9rem;
+    padding-bottom: 4px;
+  }
+
+}
+
